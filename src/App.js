@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+import { Header } from "./Header";
+import { Route, Switch, useHistory } from "react-router-dom";
+import Button from "@mui/material/Button";
+import { Dashboard } from "./dashboard";
+import { Userlist } from "./userlist";
+import { Productlist } from "./products";
+export default function App() {
+  const history = useHistory();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="overall-div">
+      <div id="navbar">
+        <div>
+          <h1>GUVI</h1>
+        </div>
+
+        <Button onClick={() => history.push("/")}>Home</Button>
+        <Button onClick={() => history.push("/Users")}>Users</Button>
+        <Button onClick={() => history.push("/Products")}>Products</Button>
+      </div>
+      <div id="content-page">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+          <Route exact path="/Users">
+            <Userlist />
+          </Route>
+          <Route exact path="/Products">
+            <Productlist />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }
-
-export default App;
