@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 export function Userlist() {
   const user = [
     {
@@ -31,6 +32,7 @@ export function Userlist() {
       profession: "Student",
     },
   ];
+
   return (
     <div id="users">
       {user.map((users, id) => (
@@ -42,13 +44,16 @@ export function Userlist() {
 
 function Displayuser({ user, id }) {
   const { name, age, address, profession } = user;
-
+  const history = useHistory();
   return (
     <div id="userdetials">
-     {name}
+      {name}
       <br /> <br />
       Profession:{profession}
- 
+      <button >
+        Show More
+      </button>
     </div>
   );
 }
+//userdetials

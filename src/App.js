@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import { Dashboard } from "./dashboard";
 import { Userlist } from "./userlist";
 import { Productlist } from "./products";
+import { Userdetials } from "./Userdetials";
+
 export default function App() {
   const history = useHistory();
   return (
@@ -15,22 +17,30 @@ export default function App() {
         </div>
 
         <Button onClick={() => history.push("/")}>Home</Button>
+        <br />
         <Button onClick={() => history.push("/Users")}>Users</Button>
+        <br />
         <Button onClick={() => history.push("/Products")}>Products</Button>
+        <br />
       </div>
       <div id="content-page">
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Dashboard />
-          </Route>
-          <Route exact path="/Users">
-            <Userlist />
-          </Route>
-          <Route exact path="/Products">
-            <Productlist />
-          </Route>
-        </Switch>
+        <div id="app-main">
+          <Switch>
+            <Route exact path="/">
+              <Dashboard />
+            </Route>
+            <Route exact path="/Users">
+              <Userlist />
+            </Route>
+            <Route exact path="/Products">
+              <Productlist />
+            </Route>
+            <Route exact path="/userdetials/:id">
+              <Userdetials />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </div>
   );

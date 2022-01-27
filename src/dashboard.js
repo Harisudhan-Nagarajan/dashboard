@@ -1,5 +1,4 @@
-import React, { PureComponent } from "react";
-import { curveCardinal } from "d3-shape";
+import React from "react";
 
 import {
   AreaChart,
@@ -115,7 +114,6 @@ export function Dashboard() {
       user: 36,
     },
   ];
-  const cardinal = curveCardinal.tension(0.2);
   return (
     <div id="main-content">
       <h2>Dashboard</h2>
@@ -164,7 +162,7 @@ export function Dashboard() {
       <div id="colmn-two">
         <div id="chart-one">
           <strong>Earnings Overview</strong>
-          <div>
+          <div id="charts">
             <AreaChart
               width={500}
               height={400}
@@ -192,29 +190,31 @@ export function Dashboard() {
         </div>
         <div id="chart-two">
           <strong>Users</strong>
-          <AreaChart
-            width={500}
-            height={400}
-            data={datas}
-            margin={{
-              top: 10,
-              right: 30,
-              left: 0,
-              bottom: 0,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="user"
-              stackId="1"
-              stroke="#8884d8"
-              fill="#8884d8"
-            />
-          </AreaChart>
+          <div id="charts">
+            <AreaChart
+              width={500}
+              height={400}
+              data={datas}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="user"
+                stackId="1"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+            </AreaChart>
+          </div>
         </div>
       </div>
     </div>

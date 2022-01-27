@@ -1,0 +1,57 @@
+[
+  {
+    "id": 100,
+    "name": "HariSudhan",
+    "date_of_birth": "31-03-2000",
+    "age": 20,
+    "address": "perambalur",
+    "profession": "Student",
+    "image": "https://www.cheatsheet.com/wp-content/uploads/2019/06/RDJ-Tony-Stark-768x519.jpg",
+    "course": "Full Stack Developement",
+    "fees": "500"
+  },
+  {
+    "id": 101,
+    "name": "SubaShree",
+    "date_of_birth": "10-08-2000",
+    "age": 20,
+    "address": "perambalur",
+    "profession": "Student",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Scarlett_Johansson_by_Gage_Skidmore_2019.jpg/330px-Scarlett_Johansson_by_Gage_Skidmore_2019.jpg",
+    "course": "Data Science",
+    "fees": "650"
+  },
+  {
+    "id": 102,
+    "name": "Ajeeth",
+    "date_of_birth": "05-12-1996",
+    "age": 26,
+    "address": "Trichy",
+    "profession": "Work",
+    "image": "https://images4.fanpop.com/image/photos/23000000/peter-peter-parker-23094911-496-585.jpg",
+    "course": "CyberSecurity & Ethical Hacking",
+    "fees": "300"
+  },
+  {
+    "id": 103,
+    "name": "Priya",
+    "date_of_birth": "24-05-1995",
+    "age": 28,
+    "address": "Bengalore",
+    "profession": "Work",
+    "image": "https://femalecricket.com/wp-content/uploads/2020/12/Smriti-Mandhana-RedBull-Athlete.jpg",
+    "course": "Data Science",
+    "fees": "550"
+  },
+  {
+    "id": 104,
+    "name": "Tanvika",
+    "date_of_birth": "08-04-2000",
+    "age": 19,
+    "address": "Namakkal",
+    "profession": "Student",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/92/Gwyneth_Paltrow_as_Pepper_Potts.jpg",
+    "course": "Automation & Testing",
+    "fees": "700"
+  }
+]
