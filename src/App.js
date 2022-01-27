@@ -25,22 +25,21 @@ export default function App() {
       </div>
       <div id="content-page">
         <Header />
-        <div id="app-main">
-          <Switch>
-            <Route exact path="/">
-              <Dashboard />
-            </Route>
-            <Route exact path="/Users">
-              <Userlist />
-            </Route>
-            <Route exact path="/Products">
-              <Productlist />
-            </Route>
-            <Route exact path="/userdetials/:id">
-              <Userdetials />
-            </Route>
-          </Switch>
-        </div>
+
+        <Switch>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+          <Route exact path="/Users">
+            <Userlist />
+          </Route>
+          <Route exact path="/Products">
+            <Productlist />
+          </Route>
+          <Route exact path="/userdetials/:id">
+            <Userdetials />
+          </Route>
+        </Switch>
       </div>
     </div>
   );

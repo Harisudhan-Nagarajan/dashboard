@@ -217,6 +217,64 @@ export function Dashboard() {
           </div>
         </div>
       </div>
+      <div id="colmn-two">
+        <div id="chart-one">
+          <strong>Earnings Overview</strong>
+          <div id="charts">
+            <AreaChart
+              width={500}
+              height={400}
+              data={data}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="Codeketa"
+                stackId="1"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+            </AreaChart>
+          </div>
+        </div>
+        <div id="chart-two">
+          <strong>Users</strong>
+          <div id="charts">
+            <AreaChart
+              width={500}
+              height={400}
+              data={datas}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="user"
+                stackId="1"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+            </AreaChart>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
